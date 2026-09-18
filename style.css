@@ -21,3 +21,5 @@ body:before { content:""; position:fixed; inset:0; pointer-events:none; opacity:
 @media (max-width:460px){.editor-shell textarea{height:158px;font-size:12px;line-height:1.8;padding:12px}.editor-actions{gap:6px}.run-button,.editor-actions .check-button{font-size:14px;padding:10px}.editor-hint{font-size:10px}.mission-panel{padding:23px 18px}.learning-tip{font-size:12px}}
 @media (max-width:850px){.board-scroll{justify-content:flex-start}.game-layout{width:100%}.board-panel{width:100%}}
 @media (min-width:851px){.hero-section{padding-inline:0}.orbit-art{flex:0 0 390px;margin-inline:0}.level-select-section{width:100%}}
+@media (min-width:851px){.hero-section{position:relative}.orbit-art{position:absolute;left:0;right:auto;top:50%;margin:0;transform:translateY(-50%)}}
+@media (max-width:850px){.orbit-art{position:absolute;left:-90px;right:auto;top:50%;margin:0;transform:translateY(-50%) scale(.8)}}

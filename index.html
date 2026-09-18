@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מסלול Flex | משחק חלל</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="מסלול Flex">
+        <span class="brand-mark">✦</span>
+        <span><b>מסלול</b> <strong>FLEX</strong></span>
+      </a>
+      <div class="mission-status">
+        <span class="status-dot"></span>
+        משימת אימון פעילה
+      </div>
+      <div class="score-box"><span>ניקוד</span><b id="score">0</b></div>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow">תחנת ניווט 07 / מעבדת CSS</p>
+          <h1>נווטו את הצי<br><em>דרך הגלקסיה</em></h1>
+          <p class="hero-intro">בכל שלב תכתבו כמה שורות CSS שיסדרו את החלליות בצורה המבוקשת. הריצו את הקוד, בדקו את התוצאה והמשיכו למשימה הבאה.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>התקדמות במשימה</span><b id="progressText">0 / 6</b></div>
+            <div class="progress-track"><span id="progressBar"></span></div>
+          </div>
+        </div>
+        <div class="orbit-art" aria-hidden="true">
+          <div class="planet planet-large"><span></span></div>
+          <div class="planet planet-small"></div>
+          <div class="orbit-ring ring-one"></div>
+          <div class="orbit-ring ring-two"></div>
+          <div class="satellite">◆</div>
+        </div>
+      </section>
+
+      <section class="game-layout" aria-label="משחק Flexbox">
+        <aside class="mission-panel">
+          <div class="panel-kicker">משימה <span id="levelNumber">01</span></div>
+          <h2 id="levelTitle">ההמראה הראשונה</h2>
+          <p id="levelInstruction">סדרו את החלליות בשורה אופקית. מקמו את כולן במרכז הלוח.</p>
+          <details class="learning-tip" open>
+            <summary><span>✦</span> הסבר קצר</summary>
+            <p id="levelTip">קודם בוחרים את כיוון התנועה. אחר כך <code>justify-content</code> קובע את המיקום לאורך כיוון התנועה, ו־<code>align-items</code> קובע את המיקום לרוחב.</p>
+          </details>
+          <div class="target-line"><span class="target-icon">◎</span><span>יעד המערכת</span><b id="targetSummary">שורה · מרכז · מרכז</b></div>
+          <div class="stats-row">
+            <div><span>ניסיונות</span><strong id="attempts">0</strong></div>
+            <div><span>שלב</span><strong><span id="currentLevel">1</span> / 6</strong></div>
+          </div>
+          <button class="ghost-button" id="resetButton" type="button">↻ איפוס שלב</button>
+        </aside>
+
+        <div class="board-panel">
+          <div class="board-header"><span>סיפון ניווט / <b id="boardLabel">SECTOR 01</b></span><span class="live-indicator">● LIVE</span></div>
+          <div class="board-scroll"><div class="game-board" id="gameBoard" aria-label="לוח המשחק"></div></div>
+          <div class="controls-area">
+            <div class="controls-heading"><span class="control-orb">&lt;/&gt;</span><div><h3>כתיבת CSS</h3><p>כתבו את הקוד והריצו אותו על הלוח</p></div></div>
+            <div class="editor-shell"><div class="editor-bar"><span><i></i><i></i><i></i></span><b>fleet.css</b><small>CSS</small></div><textarea id="codeEditor" spellcheck="false" aria-label="עורך קוד CSS"></textarea></div>
+            <div class="editor-hint">אפשר להשתמש במאפיינים: <code>display</code>, <code>flex-direction</code>, <code>justify-content</code>, <code>align-items</code>, <code>flex-wrap</code></div>
+            <div class="editor-actions"><button class="run-button" id="runButton" type="button"><span>▶ הצגת התוצאה</span></button><button class="check-button" id="checkButton" type="button"><span>בדיקת הפתרון</span><b>→</b></button></div>
+            <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="level-select-section">
+        <div><p class="eyebrow">מפת המסלול</p><h2>בחרו משימה</h2></div>
+        <div class="level-list" id="levelList"></div>
+      </section>
+    </main>
+    <footer><span>FLEX LAB / 2026</span><span>מערכת אימון ניווט CSS</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

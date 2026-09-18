@@ -1,4 +1,6 @@
 * { box-sizing: border-box; }
+@font-face { font-family:'Assistant'; font-style:normal; font-weight:400 800; font-display:swap; src:url('assets/assistant-hebrew.woff2') format('woff2'); }
+@font-face { font-family:'Orbitron'; font-style:normal; font-weight:500 800; font-display:swap; src:url('assets/orbitron-latin.woff2') format('woff2'); }
 :root { --ink:#e8f1ff; --muted:#8da1bf; --line:rgba(161,190,231,.18); --panel:#101d32; --panel-light:#162842; --cyan:#5ce1e6; --yellow:#ffd166; --pink:#ff6b9d; --green:#7be495; }
 html { scroll-behavior:smooth; }
 body { margin:0; min-width:320px; color:var(--ink); background:#07111f; font-family:'Assistant',sans-serif; }
